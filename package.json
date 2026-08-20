@@ -4,8 +4,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite --port 5173",
-    "dev:backend": "node backend/server.js",
+    "dev": "vite --host --port 5173",
+    "dev:backend": "node --watch backend/server.js",
     "dev:all": "concurrently --kill-others-on-fail \"npm run dev\" \"npm run dev:backend\"",
     "build": "vite build",
     "preview": "vite preview"
@@ -19,6 +19,7 @@
     "cors": "^2.8.6",
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
+    "lru-cache": "^11.5.2",
     "lucide": "^1.29.0",
     "three": "^0.185.1"
   }
